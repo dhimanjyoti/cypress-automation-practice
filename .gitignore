@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+[Your current changes]
+=======
+[Incoming changes from the remote branch]
+>>>>>>> FETCH_HEAD
+
+
+
+# Cypress generated files
+/cypress/videos/
+/cypress/screenshots/
+/cypress/fixtures/
+
+# Cypress binary cache
+/.cache/
+
+# Node.js dependencies
+/node_modules/
+
+# Local development files
+/.env
+
+# Log files
+*.log
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 31c7077698ef0a651ba4bd4a1b0cd163730cf04a
+# Editor-specific files
+.vscode/
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+<<<<<<< HEAD
+=======
+
+[Resolved .gitignore file]
+
+>>>>>>> 31c7077698ef0a651ba4bd4a1b0cd163730cf04a
