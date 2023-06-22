@@ -18,4 +18,26 @@ describe('Use of locators', ()=> {
         cy.get("div[id='entry_212456'] h1").should('have.text','Search - iMac');
 
     })
+
+        it("css locators", () => {
+          // visit the website
+          cy.visit("https://www.reliancedigital.in/");
+          cy.wait(3000);
+
+          // clicking on the notification popup -> No Thanks
+            cy.get('#wzrk-cancel').click();
+      
+          // search a product using ID locator
+          cy.get("#suggestionBoxEle")
+            .type("earphone")
+            .should("have.value", "earphone");
+
+          // click on the seach button
+          cy.get("#RIL_HomeSearchButton").click();
+        //   cy.wait(3000);
+      
+          // // verify the page result with search reasult
+          cy.get("div[class='pl__headline']").contains("Headphones & Headsets");
+      });
+      
 })
