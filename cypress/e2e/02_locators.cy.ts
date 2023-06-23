@@ -39,5 +39,27 @@ describe('Use of locators', ()=> {
           // // verify the page result with search reasult
           cy.get("div[class='pl__headline']").contains("Headphones & Headsets");
       });
+
+      it.only("xPath Locators",()=> {
+        // visit the website 
+        cy.visit('https://www.reliancedigital.in/');
+        cy.wait(3000);
+
+        // clicking on the notification popup -> No Thanks by using the xPath Locator
+       cy.xpath("//button[text()='No, don’t.']").click();
+
+       // searching a product using xpath locator
+       cy.xpath("//input[@type='text']")
+       .type("earphone")
+       .should("have.value", "earphone");
+
+        // click on the search button
+        cy.xpath("//button[@class='searchPanel__search']// i").click();
+        cy.wait(3000);
+
+        // verify the page 
+        cy.xpath("//h1[text()='Headphones & Headsets']").should("have.text","Headphones & Headsets");
+
+      })
       
 })
