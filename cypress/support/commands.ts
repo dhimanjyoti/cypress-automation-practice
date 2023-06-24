@@ -1,6 +1,11 @@
+// file upload plugin 
 import "cypress-file-upload";
+// drag-drop plugin 
 import "@4tw/cypress-drag-drop";
+// downloadfile plugin 
 require('cypress-downloadfile/lib/downloadFileCommand')
+// i-frame plugin 
+import 'cypress-iframe'
 
 
 /// <reference types="cypress" />
@@ -41,3 +46,24 @@ require('cypress-downloadfile/lib/downloadFileCommand')
 //   }
 // }
 
+// custom command for iFrame
+Cypress.Commands.add("getIframe", (iframe) => {
+    // geting the locator
+    cy.get("#courses-iframe")
+      .its("0.contentDocument.body")
+      .should("be.visible")
+      .then(cy.wrap);
+  });
+  
+// cypress/support/index.ts
+declare global {
+    namespace Cypress {
+      interface Chainable {
+        /**
+         * Custom command to select DOM element by data-cy attribute.
+         * @example cy.dataCy('greeting')
+         */
+        getIframe(value: string): Chainable<JQuery<HTMLElement>>
+      }
+    }
+  }
