@@ -2,6 +2,7 @@ import 'cypress-xpath';
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import "cypress-real-events";
 
 // Hide fetch/XHR requests from command log
 // Hide fetch/XHR requests
