@@ -9,6 +9,7 @@
   "author": "Dhiman",
   "license": "ISC",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.4",
     "cypress": "^12.14.0",
     "cypress-real-events": "^1.8.1",
     "cypress-xpath": "^2.0.1",
