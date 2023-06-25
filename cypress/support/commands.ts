@@ -6,6 +6,8 @@ import "@4tw/cypress-drag-drop";
 require("cypress-downloadfile/lib/downloadFileCommand");
 // i-frame plugin
 import "cypress-iframe";
+// cypress testing library
+import "@testing-library/cypress/add-commands";
 
 /// <reference types="cypress" />
 // ***********************************************

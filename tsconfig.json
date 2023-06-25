@@ -9,7 +9,8 @@
       "@4tw/cypress-drag-drop",
       "cypress-file-upload",
       "cy-verify-downloads",
-      "cypress-downloadfile"
+      "cypress-downloadfile",
+      "@testing-library/cypress"
     ]
   },
   "include": ["**/*.ts"]
