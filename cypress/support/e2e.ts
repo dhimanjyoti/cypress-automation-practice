@@ -1,12 +1,12 @@
-import 'cypress-xpath';
+import "cypress-xpath";
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 import "cypress-real-events";
-require('cypress-xpath');
-require('@4tw/cypress-drag-drop')
-import './exception';
-require('cy-verify-downloads').addCustomCommand();
+require("cypress-xpath");
+require("@4tw/cypress-drag-drop");
+import "./exception";
+require("cy-verify-downloads").addCustomCommand();
 
 // Hide fetch/XHR requests from command log
 // Hide fetch/XHR requests
@@ -19,5 +19,3 @@ if (!app.document.head.querySelector("[data-hide-command-log-request]")) {
 
   app.document.head.appendChild(style);
 }
-
-
