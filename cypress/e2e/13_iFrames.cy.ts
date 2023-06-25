@@ -14,9 +14,7 @@ describe("handling iFrame", () => {
     iFrame
       .find("div[id='search-2'] input[placeholder='Search...']")
       .type("Software testing");
-    iFrame
-      .get("div[id='search-2'] button[role='button']")
-      .click();
+    iFrame.get("div[id='search-2'] button[role='button']").click();
   });
 
   it("Approach_2(Using custom command)", () => {
@@ -47,16 +45,14 @@ describe("handling iFrame", () => {
     );
 
     // click on the search button
-    cy.get(
-      "div[id='search-2'] button[role='button']"
-    ).click();
+    cy.get("div[id='search-2'] button[role='button']").click();
   });
 
-  it.only('Typing inside an iFrame also selecting all the text and deleting it',()=> {
-        cy.visit(`${Cypress.env("theInternet")}/iframe`);
-        cy.get("#mce_0_ifr").then((iframe)=> {
-            const body = iframe.contents().find("body");
-            cy.wrap(body).find('p').type('{selectALL}{del} My name is chris');
-        })
-})
+  it.only("Typing inside an iFrame also selecting all the text and deleting it", () => {
+    cy.visit(`${Cypress.env("theInternet")}/iframe`);
+    cy.get("#mce_0_ifr").then((iframe) => {
+      const body = iframe.contents().find("body");
+      cy.wrap(body).find("p").type("{selectALL}{del} My name is chris");
+    });
+  });
 });
